@@ -114,3 +114,8 @@ $ make menuconfig
 ## 建立 inittab 檔案 (下載老師github的inittab)
 放在 ramdisk 根目錄 root/etc/inittab
 
+進入busybox的menucofig
+Linux system Utilities --> Mount 
+子目錄的Support /etc/fstab and -a 要打勾
+
+
