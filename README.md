@@ -103,4 +103,12 @@ $ make menuconfig
 ```
  然後選單打開(1)init (2)ash(shell language)
  
+# 要把kernel裡面的設定 init=/init 拿掉
+
+# 接下來執行 會出現錯誤：找不到init process
+原因是busybox 的 init process找不到shared library
+所以要去看他需要哪些shared library --> 利用ldd
+上課的解法：打開Build BusyBox as a static binary
+然後重新make install 重新開機就可以了
+
 
