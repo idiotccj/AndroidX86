@@ -118,4 +118,5 @@ $ make menuconfig
 Linux system Utilities --> Mount 
 子目錄的Support /etc/fstab and -a 要打勾
 
-
+## 在64bit的開發環境要build出32bit的image(?)
+--> busybox的menuconfig裡面 要打開Build Options的
