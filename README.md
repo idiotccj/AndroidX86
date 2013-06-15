@@ -28,11 +28,6 @@ $ cp -pa grub/ ~/copyFiles/
 cp android-4.2-test/kernel ~/android-x86
 ```
 
-```
-cp -pa grub/ ~/android-x86
-cp android-4.2-test/kernel ~/android-x86
-```
-
 5. 
 
 
