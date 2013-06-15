@@ -92,26 +92,26 @@ e2fsck 1.41.14 (22-Dec-2010)
 /dev/sdb4: clean, 11/51200 files, 8013/204800 blocks
 ```
 
-## Deploy
+# Deploy
 
-# 把(1)initrd.img (2)kernel (3)ramdisk (4)grub 
+## 把(1)initrd.img (2)kernel (3)ramdisk (4)grub 
 copy到第一個partition
 
 ```
 
 ```
-# 把system.tar.gz 解壓縮到第二個partition
+## 把system.tar.gz 解壓縮到第二個partition
 ```
 ```
 
-# 安裝grub
+## 安裝grub
 --root-directory=放被掛載的裝置目錄
 最後一個參數放裝置名稱
 ```
 $ sudo grub-install --root-directory=/home/androidporting/mountTemp /dev/sdb1
 ```
 
-# 修改init.rc (from ramdisk.img)
+## 修改init.rc (from ramdisk.img)
 
 5. 
 
