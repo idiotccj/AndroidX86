@@ -112,7 +112,9 @@ $ sudo grub-install --root-directory=/home/androidporting/mountTemp /dev/sdb1
 ```
 
 ## 修改init.rc (from ramdisk.img)
-
+```
+$ gzip -d < ../ramdisk.img | cpio -id
+```
 5. 
 
 
