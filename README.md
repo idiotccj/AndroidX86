@@ -111,4 +111,6 @@ $ make menuconfig
 上課的解法：打開Build BusyBox as a static binary
 然後重新make install 重新開機就可以了
 
+## 建立 inittab 檔案 (下載老師github的inittab)
+放在 ramdisk 根目錄 root/etc/inittab
 
