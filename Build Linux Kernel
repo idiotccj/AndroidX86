@@ -1,0 +1,56 @@
+## Get vbox_defconfig
+1. Download kernel goldfish 
+```
+# create working directory and git it in this directory
+$ git clone https://android.googlesource.com/kernel/goldfish.git -b android-goldfish-2.6.29
+# Ex: /home/androidporting/myKernel/goldfish/arch/x86/configs/vbox_defconfig
+```
+
+2. Get vbox_defconfig from goldfish
+
+3. Get Android Linux Kernel
+Download Androi Linux Kernel
+https://www.kernel.org
+prefered 3.4 at this moment
+
+'''
+$ mkdir myKernel
+$ cd myKernel
+$ wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.4.49.tar.xz
+$ tar -xJf linux-3.4.49.tar.xz
+$ cd linux-3.4.49/
+$ pwd
+$ .../myKernel/linux-3.4.49
+'''
+
+4. Copy vbox_defconfig to android linux kernel 3.4.49
+```
+$ copy myKernel/goldfish/arch/x86/configs/vbox_defconfig  myKernel/linux-3.4.49/arch/x86/configs/
+```
+
+5. Make kernel by using vbox_defconfig
+Modify Makefile
+```
+$ cd myKernel/linux-3.4.49
+$ gedit Makefile
+```
+ARCH  	?= i386
+CROSS_COMPILE  ?= /home/androidporting/ICS/prebuilt/linux-x86/toolchain/i686-linux-glibc2.7-4.4.3/bin/i686-linux-
+P.S. Fail build by using teacher's gcc version: "prebuilt/linux-x86/toolchain/i686-linux-4.4.3/bin/i686-android-linux-"
+```
+$ make vbox_defconfig
+#
+# configuration written to .config
+#
+$ make menuconfig
+$ make -j2
+# Make Success info:
+Setup is 14624 bytes (padded to 14848 bytes).
+System is 2992 kB
+CRC 81db5d3d
+Kernel: arch/x86/boot/bzImage is ready  (#1)
+```
+
+
+
+
